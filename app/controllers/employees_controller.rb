@@ -1,10 +1,10 @@
 class EmployeesController < ApplicationController
   def show
-    render json: Employee.find_by(id: params[:id]).as_json
+    render json: Employee.find_by(id: params[:id])
   end
 
   def index
-    render json: Employee.all.as_json
+    render json: Employee.all
   end
 
   def create
@@ -17,7 +17,7 @@ class EmployeesController < ApplicationController
       dept_id: params[:dept_id],
     )
     if employee.save
-      render json: employee.as_json
+      render json: employee
     else
       render json: { errors: employee.errors.full_messages }, status: 418
     end
@@ -33,7 +33,7 @@ class EmployeesController < ApplicationController
     employee.dept_id = params[:dept_id] || employee.dept_id
 
     if employee.save
-      render json: employee.as_json
+      render json: employee
     else
       render json: { errors: employee.errors.full_messages }, status: 418
     end

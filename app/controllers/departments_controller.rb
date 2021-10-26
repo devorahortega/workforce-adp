@@ -1,10 +1,10 @@
 class DepartmentsController < ApplicationController
   def show
-    render json: Department.find_by(id: params[:id]).as_json
+    render json: Department.find_by(id: params[:id])
   end
 
   def index
-    render json: Department.all.as_json
+    render json: Department.all
   end
 
   def create
@@ -14,7 +14,7 @@ class DepartmentsController < ApplicationController
       dept_manager: params[:dept_manager],
     )
     if department.save
-      render json: department.as_json
+      render json: department
     else
       render json: { errors: department.errors.full_messages }, status: 418
     end
@@ -27,7 +27,7 @@ class DepartmentsController < ApplicationController
     department.dept_manager = params[:dept_manager] || department.dept_manager
 
     if department.save
-      render json: department.as_json
+      render json: department
     else
       render json: { errors: department.errors.full_messages }, status: 418
     end

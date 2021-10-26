@@ -29,12 +29,12 @@ Content-Type: application/json
 ###
 DELETE http://localhost:3000/employees/2.json
 
-### Department Requests - Index
-GET http://localhost:3000/departments/1.json
+### Departments - Index Request
+GET http://localhost:3000/departments.json
 Content-Type: application/json
 
-###
-GET http://localhost:3000/departments.json
+### Departments - Show Request
+GET http://localhost:3000/departments/2.json
 Content-Type: application/json
 
 ### Departments - Create Request
@@ -42,18 +42,18 @@ POST http://localhost:3000/departments.json
 Content-Type: application/json
 
 {
-  "dept_name": "GIT Police",
-  "dept_code": 50,
-  "dept_manager": "Ismail"
+  "dept_name": "Postico Police",
+  "dept_code": 9,
+  "dept_manager": "Kelly"
 }
 
-###
+### Departments - Update Request
 PATCH http://localhost:3000/departments/3.json
 Content-Type: application/json
 
 {
-  "job_title": "sergeant"
+  "dept_code": 900
 }
 
-###
-DELETE http://localhost:3000/departments/2.json
+### Departments - Delete Request
+DELETE http://localhost:3000/departments/3.json
