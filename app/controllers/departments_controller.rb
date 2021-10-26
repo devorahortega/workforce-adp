@@ -1,4 +1,7 @@
 class DepartmentsController < ApplicationController
+  before_action :authenticate_manager, except: [:show, :index]
+  before_action :authenticate_user
+
   def show
     render json: Department.find_by(id: params[:id])
   end
