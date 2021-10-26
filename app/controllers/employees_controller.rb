@@ -14,7 +14,7 @@ class EmployeesController < ApplicationController
       email: params[:email],
       phone: params[:phone],
       job_title: params[:job_title],
-      dept_id: params[:dept_id],
+      department_id: params[:department_id],
     )
     if employee.save
       render json: employee
@@ -30,7 +30,7 @@ class EmployeesController < ApplicationController
     employee.email = params[:email] || employee.email
     employee.phone = params[:phone] || employee.phone
     employee.job_title = params[:job_title] || employee.job_title
-    employee.dept_id = params[:dept_id] || employee.dept_id
+    employee.department_id = params[:department_id] || employee.department_id
 
     if employee.save
       render json: employee
