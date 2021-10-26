@@ -17,3 +17,43 @@ Content-Type: application/json
   "job_title": "sargeant",
   "dept_id": 2
 }
+
+###
+PATCH http://localhost:3000/employees/3.json
+Content-Type: application/json
+
+{
+  "job_title": "sergeant"
+}
+
+###
+DELETE http://localhost:3000/employees/2.json
+
+### Department Requests - Index
+GET http://localhost:3000/departments/1.json
+Content-Type: application/json
+
+###
+GET http://localhost:3000/departments.json
+Content-Type: application/json
+
+### Departments - Create Request
+POST http://localhost:3000/departments.json
+Content-Type: application/json
+
+{
+  "dept_name": "GIT Police",
+  "dept_code": 50,
+  "dept_manager": "Ismail"
+}
+
+###
+PATCH http://localhost:3000/departments/3.json
+Content-Type: application/json
+
+{
+  "job_title": "sergeant"
+}
+
+###
+DELETE http://localhost:3000/departments/2.json
