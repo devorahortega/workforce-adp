@@ -2,4 +2,6 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   get "employees/:id" => "employees#show"
   get "employees" => "employees#index"
+  post "employees" => "employees#create"
+  patch "employees/:id" => "employees#update"
 end

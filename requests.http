@@ -4,3 +4,16 @@ Content-Type: application/json
 ###
 GET http://localhost:3000/employees.json
 Content-Type: application/json
+
+###
+POST http://localhost:3000/employees.json
+Content-Type: application/json
+
+{
+  "first_name": "Ismail",
+  "last_name": "K",
+  "email": "ismail@example.com",
+  "phone": "random number",
+  "job_title": "sargeant",
+  "dept_id": 2
+}
