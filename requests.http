@@ -37,9 +37,9 @@ POST http://localhost:3000/departments.json
 Content-Type: application/json
 
 {
-  "dept_name": "Postico Police",
-  "dept_code": 9,
-  "dept_manager": "Kelly"
+  "dept_name": "Yoyo",
+  "dept_code": -5,
+  "dept_manager": "yoyoma"
 }
 
 ### Departments - Update Request
@@ -51,4 +51,4 @@ Content-Type: application/json
 }
 
 ### Departments - Delete Request
-DELETE http://localhost:3000/departments/3.json
+DELETE http://localhost:3000/departments/6.json
