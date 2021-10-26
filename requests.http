@@ -3,6 +3,7 @@ Content-Type: application/json
 
 ###
 GET http://localhost:3000/employees.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzUzNjgxMDF9.kclJAkGOfvV93Eo4bPcSY3U_7k7hyRZ0-z_VUBsLfcU
 Content-Type: application/json
 
 ###
@@ -52,3 +53,23 @@ Content-Type: application/json
 
 ### Departments - Delete Request
 DELETE http://localhost:3000/departments/6.json
+
+### Users - Create Request
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "name": "Test name",
+  "email": "test@test.com",
+  "password": "password",
+  "password_confirmation": "password"
+}
+
+### Sessions create (login)
+POST http://localhost:3000/sessions
+Content-Type: application/json
+
+{
+  "email": "test@test.com",
+  "password": "password"
+}

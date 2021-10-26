@@ -1,4 +1,7 @@
 class EmployeesController < ApplicationController
+  before_action :authenticate_manager, except: [:show, :index]
+  before_action :authenticate_user
+
   def show
     render json: Employee.find_by(id: params[:id])
   end
